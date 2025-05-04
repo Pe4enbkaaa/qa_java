@@ -6,7 +6,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import java.util.List;
 
 
@@ -15,10 +14,7 @@ public class TestSpyClassCatLionFeline {
 
 
     @Spy
-    private  Predator predator;
-
-    @Spy
-    private  Feline feline;
+    private Feline feline;
 
     @Test
     public void checkClassLionGetKittens(){

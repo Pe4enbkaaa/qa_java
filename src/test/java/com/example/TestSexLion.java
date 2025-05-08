@@ -33,11 +33,12 @@ public class TestSexLion {
     public void checkLionSex() throws Exception {
         if (expectedError == null) {
             Lion lion = new Lion(sex);
-            assertEquals(expectedHasMane, lion.hasMane);
+            assertEquals(expectedHasMane, lion.doesHaveMane());
         } else {
             Exception exception = assertThrows(Exception.class, () -> new Lion(sex));
             assertEquals(expectedError, exception.getMessage());
         }
 
     }
+
 }

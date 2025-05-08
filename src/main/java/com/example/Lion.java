@@ -3,8 +3,13 @@ package com.example;
 import java.util.List;
 
 public class Lion {
+    private  boolean hasMane;
+    private Predator predator;
 
-    boolean hasMane;
+    public Lion(Predator predator, boolean hasMane){
+        this.predator = predator;
+        this.hasMane = hasMane;
+    }
 
     public Lion(String sex) throws Exception {
         if ("Самец".equals(sex)) {
@@ -14,12 +19,6 @@ public class Lion {
         } else {
             throw new Exception("Используйте допустимые значения пола животного - самей или самка");
         }
-    }
-
-    Predator predator;
-
-    public Lion(Predator predator){
-        this.predator = predator;
     }
 
     public int getKittens() {

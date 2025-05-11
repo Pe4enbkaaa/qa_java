@@ -3,11 +3,11 @@ package com.example;
 import java.util.List;
 
 public class Lion {
-    private  boolean hasMane;
-    private Predator predator;
+    private final boolean hasMane;
+    private  Predator predator;
 
-    public Lion(Predator predator, boolean hasMane){
-        this.predator = predator;
+    public Lion(Feline feline, boolean hasMane){
+        this.predator = feline;
         this.hasMane = hasMane;
     }
 

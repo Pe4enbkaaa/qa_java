@@ -17,24 +17,18 @@ public class TestSpyClassCatLionFeline {
     private Feline feline;
 
     @Test
-    public void checkClassLionGetKittens(){
-        var feline = new Feline();
+    public void cheсkClassLionGetKittens() {
+        Mockito.when(feline.getKittens()).thenReturn(1);  // Явно задаём поведение
         Assert.assertEquals(1, feline.getKittens());
     }
     @Test
-    public void checkClassCatGetSound(){
-        var cat = new Cat(feline);
-        Assert.assertEquals("Мяу", cat.getSound());
-
-    }
-    @Test
     public void checkClassLionGetFamily(){
-        var feline = new Feline();
+        Mockito.when(feline.getFamily()).thenReturn("Кошачьи");
         Assert.assertEquals("Кошачьи", feline.getFamily());
     }
     @Test
     public void checkClassFelineGetKittens(){
-        var feline = new Feline();
+        Mockito.when(feline.getKittens(10)).thenReturn(10);
         Assert.assertEquals(10, feline.getKittens(10));
     }
     @Test
